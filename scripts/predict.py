@@ -2,7 +2,7 @@ import pandas as pd
 import joblib
 
 def load_test_data():
-    return pd.read_csv('data/test.csv')
+    return pd.read_csv('./data/test.csv')
 
 def preprocess_test_data(data):
     # Apply the same preprocessing steps as in preprocess.py
