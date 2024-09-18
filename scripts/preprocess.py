@@ -6,9 +6,9 @@ def load_data():
     return train_data
 
 def preprocess_data(data):
-    data['Age'].fillna(data['Age'].median(), inplace=True)
-    data['Embarked'].fillna(data['Embarked'].mode()[0], inplace=True)
-    data['Fare'].fillna(data['Fare'].median(), inplace=True)
+    data['Age'] = data['Age'].fillna(data['Age'].median())
+    data['Embarked'] = data['Embarked'].fillna(data['Embarked'].mode()[0])
+    data['Fare'] = data['Fare'].fillna(data['Fare'].median())
     data['Sex'] = data['Sex'].map({'male': 0, 'female': 1})
     data = pd.get_dummies(data, columns=['Embarked'], drop_first=True)
     data = data.drop(columns=['PassengerId', 'Name', 'Ticket', 'Cabin'])
