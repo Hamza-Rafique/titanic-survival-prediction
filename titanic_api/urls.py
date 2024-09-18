@@ -1,5 +1,8 @@
-from django.urls import path, include
+# project/urls.py
+from django.contrib import admin
+from django.urls import include, path
 
 urlpatterns = [
-    path('api/', include('prediction.urls')),
+    path('admin/', admin.site.urls),
+    path('api/', include('prediction.urls')),  # Ensure this line is included
 ]
