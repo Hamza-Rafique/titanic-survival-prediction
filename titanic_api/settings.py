@@ -1,8 +1,14 @@
 INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'prediction',  # Add your app here
     'rest_framework',
-    'prediction',
-    'corsheaders',
 ]
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # This should be at the top
     'django.middleware.security.SecurityMiddleware',

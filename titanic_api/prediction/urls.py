@@ -1,7 +1,6 @@
-# prediction/urls.py
 from django.urls import path
-from .views import PredictView
+from . import views  # Ensure you are importing views from the same directory
 
 urlpatterns = [
-    path('predict/', PredictView.as_view(), name='predict'),
+    path('predict/', views.predict, name='predict'),  # This maps to /api/predict/
 ]

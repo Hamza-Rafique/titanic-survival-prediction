@@ -1,8 +1,6 @@
-# project/urls.py
-from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
+from . import views  # Assuming your views are in the same app
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('prediction.urls')),  # Ensure this line is included
+    path('api/predict/', views.predict, name='predict'),  # This maps to the 'predict' view
 ]
